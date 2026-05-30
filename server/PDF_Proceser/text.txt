@@ -1,0 +1,38 @@
+Introduction
+The rapid advancement of generative models—particularly large language models (LLMs) and
+diffusion-based image generators—has created a dual-use landscape. While these systems
+enable unprecedented productivity and creativity, they also introduce risks related to
+misinformation, academic integrity, intellectual property, and trust in digital content.
+Consequently, AI-generated content detection has emerged as a critical subfield spanning
+machine learning, signal processing, digital forensics, and information theory.
+Detection methods aim to distinguish between human-authored and machine-generated
+artifacts by identifying statistical irregularities, latent signatures, or provenance signals. This
+essay examines the underlying techniques for detecting AI-generated text and images,
+evaluates their robustness, and surveys prominent tools in the current ecosystem.
+The detection of AI-generated text relies heavily on identifying statistical signatures that
+differentiate machine output from human writing. Language models generate text by sampling
+from learned probability distributions over tokens, which results in measurable differences in
+perplexity and entropy. Perplexity quantifies how predictable a piece of text is under a given
+model, and AI-generated content often exhibits lower perplexity when evaluated against similar
+architectures because it aligns closely with the training distribution. Additionally, human writing
+tends to exhibit burstiness, meaning variations in sentence complexity and structure, whereas
+machine-generated text often appears smoother and more uniform in its statistical profile.
+Tools such as GPTZero operationalize these concepts by combining perplexity and
+burstiness metrics to classify text as likely human or AI-generated. However, such approaches
+are inherently limited because they rely on statistical tendencies rather than deterministic rules.
+Minor edits, paraphrasing, or hybrid human-AI writing can significantly alter these metrics and
+reduce detection accuracy.
+More advanced detection systems use supervised machine learning classifiers trained on large
+datasets of labeled human and AI-generated text. Platforms such as Turnitin integrate
+transformer-based models and stylometric features into their pipelines. These systems analyze
+linguistic patterns, syntactic structures, and semantic embeddings to distinguish between
+human and machine authorship. Despite their sophistication, these classifiers often suffer from
+poor generalization when applied to outputs from newer or unseen generative models, making
+them vulnerable in rapidly evolving environments. A promising direction involves embedding
+watermarks directly into generated text. Watermarking techniques subtly bias token selection
+during generation, encoding a hidden statistical signature that can later be detected through
+hypothesis testing. Research efforts by organizations like OpenAI have explored methods such
+as token green-listing and probabilistic biasing. Unlike post-hoc detection, watermarking offers a
+more reliable mechanism because it leverages controlled generation processes rather than
+retrospective inference. However, watermarking requires widespread adoption and can be
+circumvented through rewriting or translation.
