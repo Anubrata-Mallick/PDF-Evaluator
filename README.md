@@ -20,21 +20,21 @@ Short project description.
 
 ---
 
-## HEADING 1
+## System Architecture
 
-Content here.
-
----
-
-## HEADING 2
-
-Content here.
+![Architecture](PATH_TO_IMAGE_1)
 
 ---
 
-## HEADING 3
+## Text Processor Module
 
-Content here.
+![Text Module](PATH_TO_IMAGE_1)
+
+---
+
+## Image Processor Module
+
+![Image Module](PATH_TO_IMAGE_1)
 
 ---
 
